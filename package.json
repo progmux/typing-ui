@@ -1,0 +1,17 @@
+{
+  "name": "typing-ui",
+  "version": "1.0.0",
+  "description": "User interface for practicing typing.",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/progmux/typing-ui.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/progmux/typing-ui/issues"
+  },
+  "homepage": "https://github.com/progmux/typing-ui#readme"
+}
