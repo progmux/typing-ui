@@ -18,6 +18,8 @@
   "dependencies": {
     "connect": "^3.6.3",
     "dotenv": "^4.0.0",
-    "server-static": "^2.0.5"
+    "dotenv-webpack": "^1.5.3",
+    "server-static": "^2.0.5",
+    "webpack": "^3.3.0"
   }
 }
