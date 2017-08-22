@@ -13,5 +13,10 @@
   "bugs": {
     "url": "https://github.com/progmux/typing-ui/issues"
   },
-  "homepage": "https://github.com/progmux/typing-ui#readme"
+  "homepage": "https://github.com/progmux/typing-ui#readme",
+  "dependencies": {
+    "connect": "^3.6.3",
+    "dotenv": "^4.0.0",
+    "server-static": "^2.0.5"
+  }
 }
