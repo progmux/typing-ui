@@ -1,7 +1,6 @@
 var connect = require(`connect`);
 var serveStatic = require(`serve-static`);
 var path = require(`path`);
-var dotenv = require(`dotenv`);
 
 module.exports = {
   start: function () {
