@@ -1,4 +1,5 @@
 require(`dotenv`).config();
+const moment = require(`moment`);
 const server = require(`./resources/server.js`);
 const builder = require(`./resources/builder.js`);
 const webpackCompiler = require(`./resources/webpackCompiler.js`);
@@ -20,7 +21,7 @@ function watch() {
         ignored: [/node_modules/, /dist/],
         poll: 1000
     }, (err, stats) => {
-        console.log(`Changes detected.`);
+        console.log(moment().format(`M/D/YY HH:mm:ss`) + ` Changes detected!`);
         if (server.instance) {
             console.log(`Closing server.`);
             server.instance.close();
