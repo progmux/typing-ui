@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "User interface for practicing typing.",
   "scripts": {
+    "start": "node script/start.js"
   },
   "repository": {
     "type": "git",
