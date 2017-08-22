@@ -7,6 +7,11 @@ builder.build();
 if (process.env.NODE_ENV === `dev`) {
     watch();
 } else {
+    webpackCompiler.run(function(err, stats) {
+        if(err) {
+            console.log(err);
+        }
+    });
     server.start();
 }
 
