@@ -17,10 +17,11 @@ module.exports = {
             if (err) {
                 return console.log(err);
             } else {
+                fs.chmodSync(`./.git/hooks/pre-push`, `0777`);
                 console.log(`Git hook created.`);                
             }
         });
 
-        fs.chmodSync(`./.git/hooks/pre-push`, `0777`);
+        
     }
 };
