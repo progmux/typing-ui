@@ -29,4 +29,8 @@ let webpackConfig = {
     ]
 };
 
+if(process.env.NODE_ENV === `prod`) {
+    webpackConfig.plugins.push(new webpack.optimize.UglifyJsPlugin());
+}
+
 module.exports = webpack(webpackConfig);
