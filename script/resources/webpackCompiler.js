@@ -8,6 +8,20 @@ let webpackConfig = {
         path: path.join(__dirname, `../../dist`),
         filename: `app.bundle.js`,
     },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: `babel-loader`,
+                    options: {
+                        presets: [`env`]
+                    }
+                }
+            }
+        ]
+    },
     plugins: [
         new DotenvWebpackPlugin({
             path: `./.env`
