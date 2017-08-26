@@ -1,3 +1,55 @@
+* {
+    box-sizing: border-box;
+    display: block;
+    color: grey;
+    fill: currentColor;
+    font-family: Courier New !important;
+    font-size: 32px;
+    word-wrap: break-word;
+    text-decoration: none;
+    background-color: transparent;
+    margin: 0;
+    border-style: none;
+    outline: none;
+    padding: 0;
+    text-align: center;
+}
+
 body {
-    background-color: #ACE;
+    background-color: lightblue;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+}
+
+.header {
+    background-color: darkslategray;
+    color: lightgrey;
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row: 1;
+}
+
+.logo {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+svg path {
+    fill: lightgrey;
+}
+
+.currentWord {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row: 4;
+}
+
+input {
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: lightgrey;
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row: 5;
 }
