@@ -2,6 +2,7 @@ module.exports = {
     useEslintrc: false,
     parserOptions: {
         ecmaVersion: 7,
+        sourceType: `module`
     },
     rules: {
         semi: 2,

@@ -12,6 +12,8 @@ const builder = {
             .pipe(fs.createWriteStream(`./dist/stylesheet.css`));
         fs.createReadStream(`./src/media/favicon.ico`)
             .pipe(fs.createWriteStream(`./dist/favicon.ico`));
+
+        console.log(`Building completed.`)
     }
 };
 
