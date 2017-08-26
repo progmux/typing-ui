@@ -1,4 +1,4 @@
-document.body.onload = init();
+window.onload = init();
 
 function init() {
     
