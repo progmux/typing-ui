@@ -28,7 +28,7 @@ export default {
             }
         });
 
-        let logo = elemancer.add({
+        let logo = Promise.resolve(elemancer.add({
             parent: document.body,
             tagName: `svg`,
             svg: true,
@@ -36,16 +36,16 @@ export default {
                 viewBox: svg.logo.viewBox,
                 class: `logo`
             }
-        });
-
-        let logopath = elemancer.add({
-            parent: logo,
-            tagName: `path`,
-            svg: true,
-            attributes: {
-                class: `path`,
-                d: svg.logo.path,
-            }
+        })).then(function(element) {
+            return elemancer.add({
+                parent: element,
+                tagName: `path`,
+                svg: true,
+                attributes: {
+                    class: `path`,
+                    d: svg.logo.path,
+                }
+            });
         });
 
         let currentWord = elemancer.add({
