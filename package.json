@@ -24,6 +24,7 @@
     "connect": "^3.6.3",
     "dotenv": "^4.0.0",
     "dotenv-webpack": "^1.5.3",
+    "lodash.map": "^4.6.0",
     "moment": "^2.18.1",
     "server-static": "^2.0.5",
     "webpack": "^3.3.0"
