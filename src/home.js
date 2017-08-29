@@ -101,7 +101,7 @@ export default {
             if(column === 1) reverse = false;
             if(column === 12) reverse = true;
             reverse ? column-- : column++; 
-            blinker.style['grid-column'] = column;
+            blinker.style[`grid-column`] = column;
         }, 500);
     }
 };
