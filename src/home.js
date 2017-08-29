@@ -24,6 +24,11 @@ export default {
         let header = elemancer.add({
             attributes: {
                 class: `header`
+            },
+            style: {
+                'grid-column-start': 1,
+                'grid-column-end': 13,
+                'grid-row': 1,
             }
         });
 
@@ -31,7 +36,10 @@ export default {
             tagName: `svg`,
             attributes: {
                 viewBox: svg.logo.viewBox,
-                class: `logo`
+            },
+            style: {
+                'grid-column': 1,
+                'grid-row': 1,
             },
             children: [{
                 tagName: `path`,
@@ -43,8 +51,11 @@ export default {
         });
 
         let currentWord = elemancer.add({
-            attributes: {
-                class: `currentWord`
+            style: {
+                display: `none`,
+                'grid-column-start': 1,
+                'grid-column-end': 13,
+                'grid-row': 4,
             },
             textContent: stats.wordlist[stats.wordIndex]
         });
@@ -54,7 +65,11 @@ export default {
             attributes: {
                 class: `input`
             },
-            textContent: ``
+            style: {
+                'grid-column-start': 2,
+                'grid-column-end': 12,
+                'grid-row': 5,
+            }
         });
     }
 };
