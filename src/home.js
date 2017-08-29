@@ -85,6 +85,24 @@ export default {
                 'grid-row': 5,
             }
         });
+
+        let blinker = elemancer.add({
+            style: {
+                'background-color': `lightgrey`,
+                'border-radius': `20px`,
+                'grid-column': 1,
+                'grid-row': 2
+            }
+        });
+
+        let column = 1;
+        let reverse = false;
+        setInterval(function() {
+            if(column === 1) reverse = false;
+            if(column === 12) reverse = true;
+            reverse ? column-- : column++; 
+            blinker.style['grid-column'] = column;
+        }, 500)
     }
 };
 
