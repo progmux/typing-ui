@@ -3,7 +3,7 @@ import map from 'lodash.map';
 export default class {
   /**
    * The options to configure an element with.
-   * @typedef {Object} ElemancerOptions
+   * @typedef {Object} ElementOptions
    * @property {HTMLElement} parent
    * @property {string} tagName
    * @property {string} textContent
@@ -11,7 +11,7 @@ export default class {
    */
 
   /**
-   * @param {ElemancerOptions} options
+   * @param {ElementOptions} options
    */
   static add(options) {
     let element = options.tagName === `svg` || options.tagName === `path` ?
