@@ -8,6 +8,7 @@ export default class {
    * @property {string} tagName
    * @property {string} textContent
    * @property {Object.<string, string>} attributes
+   * @property {Object.<string, string>} style
    */
 
   /**
@@ -20,6 +21,10 @@ export default class {
 
     map(options.attributes, function (value, key) {
       element.setAttribute(key, value);
+    });
+
+    map(options.style, function (value, key) {
+      element.style[key] = value;
     });
 
     if (options.textContent != null) {
