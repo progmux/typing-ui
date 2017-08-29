@@ -1,6 +1,6 @@
 import map from 'lodash.map';
 
-export default {
+export default class {
   /**
    * The options to configure an element with.
    * @typedef {Object} ElemancerOptions
@@ -14,7 +14,7 @@ export default {
   /**
    * @param {ElemancerOptions} options
    */
-  add: function (options) {
+  static add(options) {
     let element = options.svg ?
       document.createElementNS(`http://www.w3.org/2000/svg`, options.tagName) :
       document.createElement(options.tagName || `div`);
