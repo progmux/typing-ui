@@ -1,21 +1,22 @@
 import map from 'lodash.map';
 
-export default {
+export default class {
   /**
    * The options to configure an element with.
-   * @typedef {Object} ElemancerOptions
+   * @typedef {Object} ElementOptions
    * @property {HTMLElement} parent
    * @property {string} tagName
    * @property {string} textContent
    * @property {Object.<string, string>} attributes
-   * @property {boolean} svg Identifies if element uses svg namespace.
+   * @property {Object.<string, string>} style
+   * @property {ElementOptions[]} children
    */
 
   /**
-   * @param {ElemancerOptions} options
+   * @param {ElementOptions} options
    */
-  add: function (options) {
-    let element = options.svg ?
+  static add(options) {
+    let element = options.tagName === `svg` || options.tagName === `path` ?
       document.createElementNS(`http://www.w3.org/2000/svg`, options.tagName) :
       document.createElement(options.tagName || `div`);
 
@@ -23,10 +24,22 @@ export default {
       element.setAttribute(key, value);
     });
 
-    if (options.textContent != null) {
+    map(options.style, function (value, key) {
+      element.style[key] = value;
+    });
+
+    if (options.textContent) {
       element.appendChild(document.createTextNode(options.textContent));
     }
 
-    return options.parent.appendChild(element);
+    (options.parent || document.body)
+      .appendChild(element);
+
+    let elemancer = this;
+    map(options.children, function (child) {
+      child.parent = element;
+      elemancer.add(child);
+    });
+    return element;
   }
 };

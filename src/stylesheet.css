@@ -1,10 +1,10 @@
 * {
     box-sizing: border-box;
     display: block;
-    color: grey;
+    color: black;
     fill: currentColor;
     font-family: Courier New !important;
-    font-size: 32px;
+    font-size: 40px;
     word-wrap: break-word;
     text-decoration: none;
     background-color: transparent;
@@ -13,43 +13,40 @@
     outline: none;
     padding: 0;
     text-align: center;
+    text-decoration: none;
 }
 
 body {
-    background-color: lightblue;
+    background-color: whitesmoke;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 50px);
+    grid-gap: 5px
 }
 
 .header {
     background-color: darkslategray;
     color: lightgrey;
-    grid-column-start: 1;
-    grid-column-end: 13;
-    grid-row: 1;
 }
 
-.logo {
-    grid-column: 1;
-    grid-row: 1;
+.button { 
+    background-color: dodgerblue;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    padding-top: 3px;
+}
+
+svg {
+    height: 100%;
 }
 
 svg path {
     fill: lightgrey;
 }
 
-.currentWord {
-    grid-column-start: 1;
-    grid-column-end: 13;
-    grid-row: 4;
-}
-
 input {
     border: 2px solid black;
     border-radius: 10px;
-    background-color: lightgrey;
-    grid-column-start: 2;
-    grid-column-end: 12;
-    grid-row: 5;
+    background-color: white;
 }

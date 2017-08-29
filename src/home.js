@@ -22,47 +22,68 @@ export default {
         };
 
         let header = elemancer.add({
-            parent: document.body,
             attributes: {
                 class: `header`
+            },
+            style: {
+                'grid-column-start': 1,
+                'grid-column-end': 13,
+                'grid-row': 1,
             }
         });
 
-        let logo = Promise.resolve(elemancer.add({
-            parent: document.body,
+        let logo = elemancer.add({
             tagName: `svg`,
-            svg: true,
             attributes: {
                 viewBox: svg.logo.viewBox,
-                class: `logo`
-            }
-        })).then(function(element) {
-            return elemancer.add({
-                parent: element,
+            },
+            style: {
+                'grid-column': 1,
+                'grid-row': 1,
+            },
+            children: [{
                 tagName: `path`,
-                svg: true,
                 attributes: {
                     class: `path`,
                     d: svg.logo.path,
                 }
-            });
+            }]
         });
 
         let currentWord = elemancer.add({
-            parent: document.body,
-            attributes: {
-                class: `currentWord`
+            style: {
+                display: `none`,
+                'grid-column-start': 1,
+                'grid-column-end': 13,
+                'grid-row': 4,
             },
             textContent: stats.wordlist[stats.wordIndex]
         });
 
-        let input = elemancer.add({
+        let startButton = elemancer.add({
             parent: document.body,
+            attributes: {
+                class: `button`,
+                clickable: `true`
+            },
+            style: {
+                'grid-column-start': 6,
+                'grid-column-end': 8,
+                'grid-row': 4,
+            },
+            textContent: `Start`
+        });
+
+        let input = elemancer.add({
             tagName: `input`,
             attributes: {
                 class: `input`
             },
-            textContent: ``
+            style: {
+                'grid-column-start': 2,
+                'grid-column-end': 12,
+                'grid-row': 5,
+            }
         });
     }
 };
