@@ -37,12 +37,9 @@ body {
     padding-top: 3px;
 }
 
-svg {
-    height: 100%;
-}
-
-svg path {
+svg, svg path {
     fill: lightgrey;
+    height: 100%;  
 }
 
 input {
