@@ -14,6 +14,7 @@ export default {
      */
 
     init: function () {
+        /** @type {TypingStats} */
         let stats = {
             startTime: moment().unix(),
             wordlist: getWordList(),
