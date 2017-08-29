@@ -45,7 +45,6 @@ export default {
             children: [{
                 tagName: `path`,
                 attributes: {
-                    class: `path`,
                     d: svg.logo.path,
                 }
             }]
