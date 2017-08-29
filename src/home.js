@@ -22,14 +22,12 @@ export default {
         };
 
         let header = elemancer.add({
-            parent: document.body,
             attributes: {
                 class: `header`
             }
         });
 
         let logo = Promise.resolve(elemancer.add({
-            parent: document.body,
             tagName: `svg`,
             attributes: {
                 viewBox: svg.logo.viewBox,
@@ -47,7 +45,6 @@ export default {
         });
 
         let currentWord = elemancer.add({
-            parent: document.body,
             attributes: {
                 class: `currentWord`
             },
@@ -55,7 +52,6 @@ export default {
         });
 
         let input = elemancer.add({
-            parent: document.body,
             tagName: `input`,
             attributes: {
                 class: `input`

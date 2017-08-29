@@ -31,6 +31,9 @@ export default class {
       element.appendChild(document.createTextNode(options.textContent));
     }
 
-    return options.parent.appendChild(element);
+    (options.parent || document.body)
+      .appendChild(element);
+
+    return element;
   }
 };
