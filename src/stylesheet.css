@@ -1,10 +1,10 @@
 * {
     box-sizing: border-box;
     display: block;
-    color: grey;
+    color: black;
     fill: currentColor;
     font-family: Courier New !important;
-    font-size: 32px;
+    font-size: 40px;
     word-wrap: break-word;
     text-decoration: none;
     background-color: transparent;
@@ -13,13 +13,15 @@
     outline: none;
     padding: 0;
     text-align: center;
+    text-decoration: none;
 }
 
 body {
-    background-color: lightblue;
+    background-color: whitesmoke;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 50px);
+    grid-gap: 5px
 }
 
 .header {
