@@ -8,14 +8,13 @@ export default class {
    * @property {string} tagName
    * @property {string} textContent
    * @property {Object.<string, string>} attributes
-   * @property {boolean} svg Identifies if element uses svg namespace.
    */
 
   /**
    * @param {ElemancerOptions} options
    */
   static add(options) {
-    let element = options.svg ?
+    let element = options.tagName === `svg` || options.tagName === `path` ?
       document.createElementNS(`http://www.w3.org/2000/svg`, options.tagName) :
       document.createElement(options.tagName || `div`);
 

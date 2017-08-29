@@ -31,7 +31,6 @@ export default {
         let logo = Promise.resolve(elemancer.add({
             parent: document.body,
             tagName: `svg`,
-            svg: true,
             attributes: {
                 viewBox: svg.logo.viewBox,
                 class: `logo`
@@ -40,7 +39,6 @@ export default {
             return elemancer.add({
                 parent: element,
                 tagName: `path`,
-                svg: true,
                 attributes: {
                     class: `path`,
                     d: svg.logo.path,
