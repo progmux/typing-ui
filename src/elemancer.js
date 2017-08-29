@@ -27,7 +27,7 @@ export default class {
       element.style[key] = value;
     });
 
-    if (options.textContent != null) {
+    if (options.textContent) {
       element.appendChild(document.createTextNode(options.textContent));
     }
 
