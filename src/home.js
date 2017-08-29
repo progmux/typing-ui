@@ -27,21 +27,19 @@ export default {
             }
         });
 
-        let logo = Promise.resolve(elemancer.add({
+        let logo = elemancer.add({
             tagName: `svg`,
             attributes: {
                 viewBox: svg.logo.viewBox,
                 class: `logo`
-            }
-        })).then(function(element) {
-            return elemancer.add({
-                parent: element,
+            },
+            children: [{
                 tagName: `path`,
                 attributes: {
                     class: `path`,
                     d: svg.logo.path,
                 }
-            });
+            }]
         });
 
         let currentWord = elemancer.add({
