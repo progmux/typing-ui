@@ -9,6 +9,7 @@ export default class {
    * @property {string} textContent
    * @property {Object.<string, string>} attributes
    * @property {Object.<string, string>} style
+   * @property {ElementOptions[]} children
    */
 
   /**
@@ -34,6 +35,11 @@ export default class {
     (options.parent || document.body)
       .appendChild(element);
 
+    let elemancer = this;
+    map(options.children, function (child) {
+      child.parent = element;
+      elemancer.add(child);
+    });
     return element;
   }
 };
