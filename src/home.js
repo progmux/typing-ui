@@ -60,6 +60,20 @@ export default {
             textContent: stats.wordlist[stats.wordIndex]
         });
 
+        let startButton = elemancer.add({
+            parent: document.body,
+            attributes: {
+                class: `button`,
+                clickable: `true`
+            },
+            style: {
+                'grid-column-start': 6,
+                'grid-column-end': 8,
+                'grid-row': 4,
+            },
+            textContent: `Start`
+        });
+
         let input = elemancer.add({
             tagName: `input`,
             attributes: {
