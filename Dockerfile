@@ -4,5 +4,5 @@ WORKDIR /home/node
 RUN apk update
 RUN apk upgrade
 COPY . .
-RUN npm install
+RUN npm install --production > npm-install.log
 ENTRYPOINT ["npm", "start"]
