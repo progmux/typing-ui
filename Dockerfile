@@ -5,5 +5,5 @@ RUN apk update
 RUN apk upgrade
 COPY . .
 RUN npm install -s
-RUN npm install > npm-install.log
+RUN npm install --production > npm-install.log
 ENTRYPOINT ["npm", "start"]
