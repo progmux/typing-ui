@@ -1,6 +1,5 @@
 FROM node:8.4.0-alpine
 RUN apk update
-RUN apk upgrade
 
 # Make Docker used existing cached layer unless package.json is changed.
 WORKDIR /tmp
