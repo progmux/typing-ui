@@ -1,4 +1,4 @@
-FROM node:8.4.0-alpine
+FROM index.docker.io/node:8.4.0-alpine
 RUN apk update
 
 # Make Docker used existing cached layer unless package.json is changed.
