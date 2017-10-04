@@ -1,0 +1,21 @@
+{
+  "kind": "Service",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "typing-ui"
+  },
+  "spec": {
+    "type": "LoadBalancer",
+    "ports": [
+      {
+        "name": "http",
+        "port": 80,
+        "targetPort": 80
+      }
+    ],
+    "selector": {
+      "app": "typing-ui",
+      "env": "dev"
+    }
+  }
+}

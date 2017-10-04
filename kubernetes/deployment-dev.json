@@ -1,0 +1,58 @@
+{
+  "kind": "Deployment",
+  "apiVersion": "extensions/v1beta1",
+  "metadata": {
+    "name": "typing-ui-dev"
+  },
+  "spec": {
+    "template": {
+      "metadata": {
+        "name": "typing-ui",
+        "labels": {
+          "app": "typing-ui",
+          "env": "dev"
+        }
+      },
+      "spec": {
+        "containers": [
+          {
+            "name": "typing-ui",
+            "image": "gcr.io/progmux-167421/typing-ui:develop-latest",
+            "volumeMounts": [
+              {
+                "name": "env-file",
+                "mountPath": "/home/node/.env"
+              }
+            ],
+            "resources": {
+              "limits": {
+                "memory": "500Mi",
+                "cpu": "100m"
+              }
+            },
+            "imagePullPolicy": "Always",
+            "readinessProbe": {
+              "httpGet": {
+                "port": 80
+              }
+            },
+            "ports": [
+              {
+                "name": "typing-ui",
+                "containerPort": 80
+              }
+            ]
+          }
+        ],
+        "volumes": [
+          {
+            "name": "env-file",
+            "hostPath": {
+              "path": "../environments/typing-ui/dev.env"
+            }
+          }
+        ]
+      }
+    }
+  }
+}
