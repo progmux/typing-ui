@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "User interface for practicing typing.",
   "scripts": {
-    "install": "node script/install.js",
     "start": "node script/start.js",
     "lint": "node script/lint.js"
   },
